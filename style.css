@@ -1,0 +1,271 @@
+/* Reset and Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f8f8f8;
+  color: #111;
+  line-height: 1.6;
+}
+
+/* Keyframe Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 107, 107, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 107, 107, 0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-12px);
+    opacity: 1;
+  }
+}
+
+/* Loader Animation */
+.loader {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #ffffff;
+}
+
+.loader .brand-name {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #111;
+  margin-bottom: 16px;
+}
+
+.loader .dots {
+  display: flex;
+  gap: 10px;
+}
+
+.loader .dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #111;
+  animation: bounce 0.6s infinite alternate;
+}
+
+.loader .dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loader .dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.loader .tagline {
+  margin-top: 18px;
+  font-size: 0.95rem;
+  color: #666;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.hh {
+  text-align: center;
+}
+
+/* Styled Links */
+.content a {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 20px;
+  background-color: #111;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.6s ease both;
+}
+
+.content a:hover {
+  background-color: #ff6b6b;
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-container {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      animation: fadeInUp 0.8s ease both;
+    }
+
+    .gallery-container h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.5rem;
+      color: #111;
+      letter-spacing: 1px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+/* About Section Styling */
+
+.about {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeInUp 0.8s ease both;
+  display: flex;
+  gap: 40px;
+  text-align: center;
+}
+
+.about p {
+  margin-top: 50px;
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.about img {
+  width: 30%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* contact */
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeInUp 0.8s ease both;
+  display: flex;
+  gap: 40px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-info {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .gallery-container,
+  .about,
+  .content {
+    padding: 30px 8px;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 50%;
+  }
+
+  .gallery-container h1 {
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .hh {
+    font-size: 1.8rem;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .about img {
+    width: 80%;
+    margin: 20px;
+    display: block;
+  }
+
+  .about p {
+    margin-top: 24px;
+    font-size: 1rem;
+  }
+
+  .contact-info {
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .content a {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1rem;
+  }
+
+  .map {
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    margin-top: 20px;
+  }
+}

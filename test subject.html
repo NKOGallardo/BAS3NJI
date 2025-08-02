@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Basenji | Loading</title>
+  <link rel="stylesheet" href="style.css" />
+ 
+</head>
+  <style>
+    .content {
+      display: none;
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    .fade-out {
+      animation: fadeOut 0.6s ease forwards;
+    }
+
+    @keyframes fadeOut {
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  </style>
+<body>
+
+  <div class="loader" id="loader">
+    <div class="brand-name">BASENJI</div>
+    <div class="dots">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <div class="tagline">Loading Threads...</div>
+  </div>
+
+  <div class="content" id="mainContent">
+    <h1 style="font-size: 3rem;">wellcome to Basenji</h1>
+    <a href="main.html">Start</a>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      const loader = document.getElementById('loader');
+      const content = document.getElementById('mainContent');
+      loader.classList.add('fade-out');
+      setTimeout(() => {
+        loader.style.display = 'none';
+        content.style.display = 'flex';
+        content.style.justifyContent = 'center';
+        content.style.alignItems = 'center';
+        content.style.height = '100vh';
+        content.style.flexDirection = 'column';
+      }, 600); // match fadeOut duration
+    }, 3000); // loader duration
+  </script>
+
+</body>
+</html>
