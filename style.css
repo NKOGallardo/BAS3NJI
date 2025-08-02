@@ -187,13 +187,6 @@ body {
   margin-bottom: 20px;
 }
 
-.about img {
-  width: 30%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
 /* contact */
 .content {
   max-width: 1200px;
@@ -218,47 +211,43 @@ body {
   .gallery-container,
   .about,
   .content {
-    padding: 30px 8px;
+    padding: 16px 4px;
     flex-direction: column;
-    gap: 24px;
-    max-width: 50%;
+    gap: 16px;
+    max-width: 100%;
+    margin: 0 70px; /* Add small margin on left and right */
   }
 
   .gallery-container h1 {
     font-size: 1.5rem;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
+    width: 100%;
   }
 
   .gallery-grid {
     grid-template-columns: 1fr;
-    gap: 14px;
+    gap: 10px;
   }
 
   .hh {
-    font-size: 1.8rem;
-    margin-bottom: 24px;
+    font-size: 1.3rem;
+    margin-bottom: 12px;
     text-align: center;
   }
-
-  .about img {
-    width: 80%;
-    margin: 20px;
-    display: block;
-  }
-
+  
   .about p {
-    margin-top: 24px;
+    margin-top: 12px;
     font-size: 1rem;
   }
 
   .contact-info {
-    padding: 12px;
+    padding: 8px;
     font-size: 1rem;
   }
 
   .content a {
     width: 100%;
-    padding: 12px 0;
+    padding: 10px 0;
     font-size: 1rem;
   }
 
@@ -266,6 +255,6 @@ body {
     align-items: center;
     width: 100%;
     height: 50%;
-    margin-top: 20px;
+    margin-top: 10px;
   }
 }
