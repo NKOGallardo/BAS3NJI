@@ -9,6 +9,16 @@
 </head>
 <body>
 
+     <div class="loader" id="loader">
+    <div class="brand-name">BASENJI</div>
+    <div class="dots">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <div class="tagline">Loading Threads...</div>
+  </div>
+
   <div class="gallery-container">
     <h1>Our Style Gallery</h1>
     <div class="gallery-grid">
@@ -28,7 +38,6 @@
       We blend minimal design with striking details to create apparel that stands out in any crowd. 
       Our mission is to empower you to express your unique style with confidence and comfort.
     </p>
-    <img src="images/white.webp" alt="About Us Image" />
   </div>
 
 
@@ -51,4 +60,19 @@
     </div>
 
 </body>
+<script>
+    setTimeout(() => {
+      const loader = document.getElementById('loader');
+      const content = document.getElementById('mainContent');
+      loader.classList.add('fade-out');
+      setTimeout(() => {
+        loader.style.display = 'none';
+        content.style.display = 'flex';
+        content.style.justifyContent = 'center';
+        content.style.alignItems = 'center';
+        content.style.height = '100vh';
+        content.style.flexDirection = 'column';
+      }, 600); // match fadeOut duration
+    }, 3000); // loader duration
+</script>
 </html>
